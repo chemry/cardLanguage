@@ -1,0 +1,40 @@
+class: DouDizhu;
+addPattern{
+	Boom: (same[4]), (+,^), ();
+	Straight: (straight[5-13]), (+), (Boom);
+	ThreeTwo: (same[3], same[2]), (+), (Boom);
+	ThreeOne: (same[3], same[1]), (+), (Boom, ThreeTwo);
+	Pair: (same[2]), (+), (Boom);
+	single: (same[1]), (+), (Boom);
+}
+
+
+config{
+	win: "empty";
+	systemPair: "true";
+	selfReplace: "true";
+	next: 1;
+	defaultStatus: "true";
+	rank: "3456789TJQKA2";
+}
+
+initCard(numPlayers){
+	drawToAll(48);
+	drawTo(0, 4);
+	setCurPlayerID(0);
+	setDisplaySize(14);
+}
+
+getStatus(){
+
+}
+
+isValidCombination(isCardSelected){
+}
+
+isWinnerFound(){
+}
+
+nextTurn(){
+
+}
